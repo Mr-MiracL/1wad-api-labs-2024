@@ -9,8 +9,6 @@ router.get('/', async (req, res) => {
     res.status(200).json(users);
 });
 
-// register(Create) User
-// register(Create)/Authenticate User
 router.post('/', async (req, res) => {
     if (req.query.action === 'register') {  //if action is 'register' then save to DB
         await User(req.body).save();
