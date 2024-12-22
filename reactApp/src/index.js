@@ -42,11 +42,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<PublicPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={ <SignUpPage /> } />
             <Route element={<ProtectedRoutes />}>
               <Route path="/movies" element={<MoviesPage />} />
-              
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/signup" element={ <SignUpPage /> } />
+              <Route path="/profile" element={<ProfilePage />} />
             </Route>
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
